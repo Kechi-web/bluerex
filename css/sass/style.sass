@@ -1,0 +1,851 @@
+// Colors:
+$t: #484848
+$l: #fff
+$act: #4b2d7f
+$btn: #f42267
+
+// Main:
+html
+    width: 100%
+    height: 100%
+    body
+        font-family: 'Montserrat', sans-serif
+        font-weight: normal
+        font-style: normal
+        font-size: 14px
+        background-color: $l
+        color: $t
+        section
+            padding: 100px 0
+        a
+            color: inherit
+        .title
+            font-size: 49px
+            font-weight: 600
+            color: inherit
+        .text
+            font-size: 14px
+            font-weight: normal
+        .overtitle
+            font-family: 'Palatino Linotype', sans-serif
+            font-size: 32px
+            font-weight: normal
+            font-style: italic
+            color: inherit
+        .subtitle
+            font-size: 25px
+            font-weight: 600
+            color: inherit
+        .btn-cir
+            display: inline-block
+            padding: 20px 25px
+            background-color: $btn
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 600
+            color: $l
+            border-radius: 23px
+            box-shadow: 1.2px 3.8px 16px 0 rgba(1, 2, 2, 0.35)
+            transition: all .3s
+            &:hover
+                background-color: rgba(75, 45, 127, 0.7)
+        .btn-rec
+            display: inline-block
+            padding: 15px 25px
+            background-color: $btn
+            text-transform: uppercase
+            color: $l
+            font-size: 15px
+            font-weight: 600
+            box-shadow: 0px 6px 0 0 lighten($btn, 15%)
+            border-radius: 10px
+            transition: all .3s
+            &:hover
+                transform: translateY(5px)
+                box-shadow: 0px 1px 0 0 lighten($btn, 15%)
+        .header
+            width: 100%
+            position: fixed
+            top: 0
+            left: 0
+            background-color: transpatrent
+            color: $l
+            margin-top: 60px
+            z-index: 100
+            &-dark
+                margin-top: 0
+                padding: 10px 0
+                background-color: $t
+                // opacity: 0.8
+            &__logo
+                display: flex
+                align-items: center
+                justify-content: space-between
+                text-align: center
+                font-size: 41px
+                font-weight: 600
+            nav
+                align-items: flex-end
+                a
+                    font-size: 17px
+                    font-weight: 600
+                    transition: all .3s
+                    margin: 0 15px
+                    &:hover
+                        text-shadow: 0 0 20px $l
+        .wrapper
+            .menu
+                display: none
+        .intro
+            min-height: 800px
+            background-color: $l
+            background-image: url(../img/intro/bg.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            background-attachment: fixed
+            position: relative
+            color: $l
+            z-index: 0
+            text-align: center
+            &-bg
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-blend-mode: multiply
+                background-image: linear-gradient(45deg, #ed1b33, #442e82)
+                opacity: 0.9
+                z-index: 1
+            &__inner
+                z-index: 2
+                position: relative
+                padding-top: 150px 
+                .overtitle
+                    font-size: calc( 18px + 14 * (100vw / 1800))
+                .title
+                    margin: 20px 0
+                    font-size: calc( 32px + 28 * (100vw / 1800))
+                .text
+                    margin: 20px 0
+                    font-size: calc(15px + 8 * (100vw / 1800))
+                    max-width: 70%
+                    margin: 0 auto
+            &__btns
+                display: flex
+                justify-content: center
+                margin-top: 80px
+                .btn-cir
+                    margin: 0 30px 0 40px
+                    &:last-child
+                        margin-left: 0
+        .about
+            width: 100%
+            background-color: $l
+            color: $t
+            .overtitle
+                font-size: calc( 18px + 14 * (100vw / 1800))
+            .title
+                margin: 20px 0 30px
+                font-size: calc( 32px + 17 * (100vw / 1800))
+            img
+                display: block
+                width: 350px
+                height: 450px
+                margin-left: auto
+            &__tabs
+                padding-bottom: 100px
+                &-link
+                    display: inline-block
+                    padding: 20px 25px
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-weight: 600
+                    border-radius: 23px
+                    cursor: pointer
+                &-items
+                    margin: 30px 0 50px 21px
+                    position: relative
+            &__tab
+                position: absolute
+                top: 0
+                left: 0
+                opacity: 0
+                text-align: left
+                transform: translateY(40%)
+                transition: all .5s ease-out
+                &-act
+                    animation: tabs .5s ease-out forwards
+                    @keyframes tabs
+                        0%
+                            transform: translateY(0%)
+                            opacity: 1
+                        50%
+                            transform: translateY(40%)
+                            opacity: 0
+                        100%
+                            transform: translateY(0%)
+                            opacity: 1
+            .btn-cir
+                &:hover
+                    background-color: $btn
+                    opacity: 1
+            .btn-rec
+                margin-left: 20px
+        .achivement
+            width: 100%
+            background-color: $act
+            color: $l
+            text-align: center
+            padding: 0
+            .col-lg-4
+                padding: 0
+            &__card
+                padding: 100px 0px
+                i
+                    font-size: 65px
+                    font-weight: 300
+                    transform: rotate(-35deg)
+                .title
+                    margin: 30px 0 20px
+                    font-size: calc( 40px + 5 * (100vw / 1800))
+                .subtitle
+                    font-size: calc( 20px + 5 * (100vw / 1800))
+                    width: 75%
+                    margin: 0 auto
+                .text
+                    opacity: 0.4
+                    font-size: 15px
+                    margin-top: 30px
+        .story
+            width: 100%
+            background-color: rgba(37, 21, 66, 0.8) 
+            color: $l
+            text-align: center
+            position: relative
+            &-bg
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: transparent
+                background-image: url(../img/story/bg.jpg)
+                background-repeat: no-repeat
+                background-position: center
+                background-attachment: fixed
+                background-size: cover
+                z-index: -1
+            .overtitle
+                font-size: calc( 18px + 14 * (100vw / 1800))
+            .title
+                font-size: calc( 32px + 17 * (100vw / 1800))
+                margin: 30px 0
+            .text
+                width: 80%
+                font-size: calc( 14px + 6 * (100vw / 1800))
+                margin: 0 auto
+                font-weight: 600
+            .btn-rec
+                margin-top: 40px
+        .skills
+            width: 100%
+            background-color: $l
+            color: $t
+            .overtitle
+                font-size: calc( 18px + 14 * (100vw / 1800))
+            .title
+                font-size: calc( 32px + 17 * (100vw / 1800))
+                margin-top: 10px
+            .text
+                font-size: calc( 14px + 4 * (100vw / 1800))
+                font-weight: 600
+                margin: 30px 0
+            &__video
+                background-image: url(../img/skills/video.jpg)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+                position: relative
+                max-width: 40vw
+                min-height: 50vh
+                margin-left: auto
+                display: block
+                border-radius: 20px
+                .btn-cir
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 40px
+                    width: 100px
+                    height: 100px
+                    border-radius: 50%
+                    background-color: $btn
+                    color: $l
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    &:hover
+                        background-color: $act
+                        opacity: 0.9
+                    i
+                        transform: translateX(3px)
+            &__item
+                margin-top: 25px
+                i
+                  background-image: linear-gradient(to top, #dd164c, #5d0aa8)
+                  -webkit-background-clip: text
+                  color: transparent
+                  font-size: 60px
+                  &.fa-bullhorn
+                        transform: rotate(-35deg)
+                .subtitle
+                    font-size: calc( 20px + 5 * (100vw / 1800))
+                    margin: 15px 0
+                .text
+                    font-size: 14px
+                    margin: 0
+                    font-weight: normal
+                .btn-rec
+                    margin-top: 30px
+        .works
+            width: 100%
+            background-color: #f1f1f1
+            color: $t
+            text-align: center
+            .title
+                font-size: calc( 35px + 14 * (100vw / 1800))
+            .text
+                max-width: 75%
+                margin: 40px 0
+                font-size: calc( 14px + 6 * (100vw / 1800))
+            .btn-rec
+                margin-top: 50px
+            &__links
+                justify-content: center
+                margin-bottom: 50px
+            &__tabs
+                &-link
+                    padding: 20px 25px
+                    background-color: transparent
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-weight: 600
+                    text-align: center
+                    cursor: pointer
+                    border-radius: 23px
+                    &.btn-cir
+                        background-color: $btn
+            &__tab
+                transition: opacity .5s ease-out
+                &-item
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: relative
+                    max-width: 350px
+                    height: 300px
+                    margin: 10px
+                    overflow: hidden
+                    font-size: 60px
+                    color: $l
+                    i
+                        transform: translateY(30px)
+                        transition: all .3s ease-out
+                        opacity: 0
+                    &-bg
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        background-color: #000000
+                        opacity: 0
+                        transition: all .3s ease-out
+                    &:hover
+                        .works__tab-item-bg
+                            opacity: 0.7
+                        i
+                            transform: translateY(0px)
+                            opacity: 1
+                    &.tab1
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/01.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab2
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/02.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab3
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/03.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab4
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/04.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab5
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/05.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab6
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/06.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab7
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/07.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab8
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/08.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                    &.tab9
+                        background-color: #f1f1f1
+                        background-image: url(../img/works/09.png)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+            #works-tab1,#works-tab2,#works-tab3
+                opacity: 0
+                display: none
+        .clients
+            width: 100%
+            background-color: $act
+            padding: 70px 0
+            color: $l
+            img
+                display: block
+                margin: 30px auto
+                max-width: 140px
+        .comments
+            width: 100%
+            background-color: rgba(0,0,0,0.7)
+            position: relative
+            color: $l
+            min-height: 650px
+            &-bg
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-image: url(../img/comments/bg.jpg)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                background-attachment: fixed
+                z-index: -1
+            img
+                position: absolute
+                bottom: 0
+                right: 25%
+            .title
+                margin: 10px 0 30px
+            .text
+                display: inline-block
+                padding: 30px 0 0 50px
+                position: relative
+                font-size: 22px
+                font-weight: 300
+                &::before
+                    content: '“'
+                    position: absolute
+                    top: 0
+                    left: 0
+                    font-size: 110px
+                    font-weight: 700
+                    color: $btn
+                    font-style: italic
+            &__avtor
+                margin: 75px 0 0 50px
+                &-star
+                    i
+                        color: $btn
+                    &:first-child
+                        margin-left: 15px
+                .subtitle
+                    margin: 25px 0 0 0
+                    font-size: 24px
+                    font-weight: 300
+        .help
+            width: 100%
+            background-color: $btn
+            background-image: url(../img/help/bg.jpg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            text-align: center
+            color: $l
+            .subtitle
+                margin: 30px 0
+                font-size: 29px
+            .text
+                max-width: 80%
+                font-size: 18px
+            form
+                margin-top: 50px
+                .btn-rec
+                    display: block
+                    background-color: $act
+                    box-shadow: 0px 6px 0 0 lighten($act, 30%)
+                    margin: 0px 0 0 auto
+                    &:hover
+                        box-shadow: 0px 1px 0 0 lighten($act, 30%)
+            &__inp
+                width: 100%
+                height: 60px
+                border-radius: 10px
+                background-color: rgba(255, 255, 255, 0.4)
+                color: inherit
+                font-size: 15px
+                line-height: 5
+                padding: 20px 25px
+                margin: 10px 0
+                &::placeholder
+                    color: inherit
+        .contact
+            width: 100%
+            background-color: $act
+            color: $l
+            padding: 70px 0
+            &-nav
+                max-width: 80%
+                margin: 0 auto
+                justify-content: space-between
+                a
+                    display: block
+                    margin: 10px auto
+                    font-size: 27px
+                    font-weight: 600
+                    transition: all .3s
+                    &:hover
+                        text-shadow: 0 0 20px $l
+        .footer
+            width: 100%
+            background-color: $l
+            padding: 100px 0 0 0
+            color: #171717
+            &__content
+                padding-bottom: 100px
+            &__copy
+                width: 100%
+                background-color: #f6f6f6
+                padding: 50px 0
+                margin: 0
+                text-align: center
+                .text
+                    font-weight: 600
+                    font-size: calc( 14px + 4 * (100vw / 1800))
+                    line-height: 1.5
+            .subtitle
+                color: $act
+                font-size: 25px
+                font-weight: 700
+                margin: 10px 0 0 0
+            &__nav
+                display: flex
+                flex-direction: column
+                margin: 10px 0 25px
+                a
+                    display: block
+                    margin: 5px 0 0 10px
+                    font-size: 15px
+                    font-weight: 600
+                    &:hover
+                        text-decoration: underline
+            &__news
+                &-link
+                    position: relative
+                    display: block
+                    margin: 10px
+                    max-width: 260px
+                    height: 200px
+                    border-radius: 10px
+                    overflow: hidden
+                    transition: all .3s ease-out
+                    img
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                    .text
+                        font-size: 14px
+                        font-weight: 300
+                        position: absolute
+                        color: $l
+                        text-align: center
+                        bottom: 0
+                        z-index: 2
+                        opacity: 0
+                        transition: all .3s ease-out
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        opacity: 0
+                        background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.6)) 
+                        transition: all .2s ease-out
+                    &:hover
+                        &::after
+                            opacity: 1
+                        .text
+                            opacity: 1
+                            bottom: 30px
+@media screen and ( max-width: 1199px )
+    html
+        body
+            .contact
+                &-nav
+                    justify-content: flex-start
+            .comments
+                img
+                    display: none
+@media screen and ( max-width: 992px )
+    html
+        body
+            .skills
+                &__video
+                    max-width: 80vw
+                    max-height: 100vh
+                    margin: 80px auto 0
+            .header
+                nav
+                    display: none
+            .intro
+                &__btns
+                    align-items: center
+                    justify-content: center
+            .wrapper
+                position: relative
+                .menu
+                    display: block
+                    position: fixed
+                    top: 0
+                    right: 0
+                    width: 40%
+                    transform: translateX(100%)
+                    z-index: 1000
+                    color: $l
+                    &__link
+                        width: 30px
+                        height: 20px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        flex-direction: column
+                        cursor: pointer
+                        position: absolute
+                        top: 82px
+                        left: -130%
+                        transition: left .5s ease-out .1s
+                        span
+                            width: 100%
+                            height: 3px
+                            background-color: $l
+                            border-radius: 30px
+                            transition: all .4s
+                        &-top
+                            top: 30px
+                        &-act
+                            justify-content: center
+                            left: 10%
+                            transition: left .3s ease-out
+                            span
+                                &:nth-child(1)
+                                    transform: translate(0,3px) rotate(45deg)
+                                &:nth-child(2)
+                                    opacity: 0
+                                &:nth-child(3)
+                                    transform: translate(0,-3px) rotate(-45deg)
+                    &__list
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        flex-direction: column
+                        text-align: center
+                        width: 100%
+                        float: right
+                        height: 100vh
+                        background-color: $t
+                        position: relative
+                        transform: translateX(100%)
+                        transition: all .6s ease-out
+                        a
+                            font-size: 24px
+                            font-weight: 600
+                            padding: 25px 0
+                            width: 100%
+                            transition: all .3s
+                            &:hover
+                                text-shadow: 0 0 20px $l
+                        &.open
+                            transform: translateX(-100%)
+            .about
+                text-align: center
+                img
+                    display: none  
+@media screen and ( max-width: 767px )
+    html
+        body
+            .footer
+                &__copy
+                    .text
+                        font-size: calc( 14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1800))
+            .help
+                .title
+                    font-size: 45px
+                .subtitle
+                    font-size: 23px
+                .text
+                    font-size: 16px
+            .comments
+                .title
+                    font-size: 43px
+            .works
+                .title
+                    font-size: calc( 35px + (14 + 14 * 0.7) * ((100vw - 320px) / 1800))
+                .text
+                    font-size: calc( 14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1800))
+                &__tab
+                    justify-content: center
+                    &-item
+                        margin: 10px auto
+            .intro
+                min-height: 90vh
+                &__inner
+                    .overtitle
+                        font-size: calc( 18px + (14 + 14 * 0.7) * ((100vw - 320px) / 1800))
+                    .title
+                        font-size: calc( 32px + (28 + 28 * 0.7) * ((100vw - 320px) / 1800))
+                    .text
+                        font-size: calc( 15px + (8 + 8 * 0.7) * ((100vw - 320px) / 1800))
+            .about
+                .overtitle
+                    font-size: calc( 18px + (14 + 14 * 0.7) * ((100vw - 320px) / 1800))
+                .title
+                    font-size: calc( 32px + (17 + 17 * 0.7) * ((100vw - 320px) / 1800))
+            .achivement
+                .title
+                    font-size: calc( 40px + (5 + 5 * 0.7) * ((100vw - 575px) / 1800))
+                .subtitle
+                    font-size: calc( 20px + (5 + 5 * 0.7) * ((100vw - 575px) / 1800))
+            .story
+                .overtitle
+                    font-size: calc( 18px + (14 + 14 * 0.7) * ((100vw - 320px) / 1800))
+                .title
+                    font-size: calc( 32px + (17 + 17 * 0.7) * ((100vw - 320px) / 1800))
+                .text
+                    font-size: calc( 14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1800))
+            .skills
+                .overtitle
+                    font-size: calc( 18px + (14 + 14 * 0.7) * ((100vw - 320px) / 1800))
+                .title
+                    font-size: calc( 32px + (17 + 17 * 0.7) * ((100vw - 320px) / 1800))
+                .subtitle
+                    font-size: calc( 20px + (5 + 5 * 0.7) * ((100vw - 320px) / 1800))
+                .text
+                    font-size: calc( 14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1800))
+@media screen and ( max-width: 575px )
+    html
+        body
+            .footer
+                padding-top: 50px
+                &__news
+                    &-link
+                        margin: 10px auto
+            .contact
+                &-nav
+                    a
+                        text-align: center
+            section
+                padding: 50px 0
+            .header
+                margin-top: 10px
+                padding: 5px 0
+                &__logo
+                    font-size: 30px
+                    img
+                        width: 40px
+                        height: 40px
+                &-dark
+                    margin-top: 0
+            .intro
+                &__inner
+                    padding-top: 50px
+                    .text
+                        max-width: 100%
+                &__btns
+                    margin-top: 40px
+            .wrapper
+                .menu
+                    width: 100%
+                    transform: translateX(100%)
+                    &__link
+                        left: -115%
+                        top: 25px
+                        transition: left .5s ease-out .1s
+                        &-top
+                            top: 15px
+                        &-act
+                            transition: left .3s ease-out
+                            left: 10%
+                    &__list
+                        width: 100%
+                        &.open
+                            transform: translateX(-100%)
+            .about
+                &__tabs
+                    padding-bottom: 120px
+            .skills
+                text-align: center
+                &__video
+                    margin-top: 1rem
+@media screen and ( max-width: 425px )
+    html
+        body
+            .footer
+                &__news
+                    &-link
+                        max-width: 100%
+            .works
+                &__links
+                    justify-content: flex-start
+            .intro
+                &__btns
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    .btn-cir
+                        margin: 10px 0
+@media screen and ( max-height: 500px )
+    html
+        body
+            .wrapper
+                .menu
+                    &__list
+                        justify-content: space-around
+                        a
+                            padding: 0px 0
